@@ -1,43 +1,20 @@
-const Engine = Matter.Engine;
-const World = Matter.World;
-const Bodies = Matter.Bodies;
-const Constraint = Matter.Constraint;
-var engine, world, backgroundImg;
-var canvas, angle, tower, ground, cannon, boat;
-var balls = [];
+const Engine =
 var boats = [];
 var score = 0;
 var boatAnimation = [];
 var boatSpritedata, boatSpritesheet;
 
-var brokenBoatAnimation = [];
-var brokenBoatSpritedata, brokenBoatSpritesheet;
+var brokenBokenBoatSpritesheet;
 
 var waterSplashAnimation = [];
 var waterSplashSpritedata, waterSplashSpritesheet;
 
 var isGameOver = false;
-
-function preload() {
-  backgroundImg = loadImage("./assets/background.gif");
-  towerImage = loadImage("./assets/tower.png");
-  boatSpritedata = loadJSON("assets/boat/boat.json");
-  boatSpritesheet = loadImage("assets/boat/boat.png");
-  brokenBoatSpritedata = loadJSON("assets/boat/broken_boat.json");
-  brokenBoatSpritesheet = loadImage("assets/boat/broken_boat.png");
-  waterSplashSpritedata = loadJSON("assets/water_splash/water_splash.json");
-  waterSplashSpritesheet = loadImage("assets/water_splash/water_splash.png");
-}
-
-function setup() {
-  canvas = createCanvas(1200,600);
-  engine = Engine.create();
-  world = engine.world;
-  angle = -PI / 4;
-  ground = new Ground(0, height - 1, width * 2, 1);
-  tower = new Tower(150, 350, 160, 310);
-  cannon = new Cannon(180, 110, 100, 50, angle);
-
+s/boat/broken_boat.png");
+  waterSplash00);
+  engi4;
+  grounew Tower(150, 350, 160, 310);
+  cannon = 
   var boatFrames = boatSpritedata.frames;
   for (var i = 0; i < boatFrames.length; i++) {
     var pos = boatFrames[i].position;
